@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
+
+//Admin routes
+Route::get('/admin', function () {
+    return view('auth/login');
+});
+Route::get('/users/create', 'AdminController@create');
+Route::get('/logout', 'AdminController@logout')->name('logout');
+Route::post('/users/store', 'AdminController@store')->name("saved_users");
