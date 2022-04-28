@@ -42,7 +42,7 @@
             <img src="{{$templatePlugin->rootLocation()}}/css/images/ched_logo.png" width="100px" height="100px"/></span><br>
             <a href="/"><b class="text-danger">PAPERLESS </b>SYSTEM</a>
         </div>
-        <h6 class="text-center" style="font-size:24px"><span class="text-danger"><b>Commission on Higher Education </b></span><br>Regional Office III</h6>
+        <h6 class="text-center" style="font-size:24px"><span class="text-danger"><b>Commission on Higher Education </b></span><br>Central Luzon RO-III</h6>
         <div class="social">
            {{-- <img src="{{asset('/css/images/open_hearts_logo.jpg"
                  alt="open" width="100%">--}}

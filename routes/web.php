@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/dashboard', 'DashboardController@index');
+
+Route::post('/processLogIn', 'Auth\LoginController@processLogin');
+
+Route::post('/login', 'Auth\LoginController@processLogin');
+
 Route::get('/', function () {
     return view('auth/login');
 });
