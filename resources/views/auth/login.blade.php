@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CHEDRO-III Paperless System</title>
+    <title>CHEDRO-III Document Submission System</title>
     <link rel="shortcut icon" type="image/png" href="{{asset('/css/images/ched_logo.png')}}"/>
 
     <!-- Bootstrap 3.3.7 -->
@@ -33,14 +33,14 @@
 {{--    <div class="login-logo">--}}
 {{--    <span class="logo-lg">--}}
 {{--            <img src="{{$templatePlugin->rootLocation()}}/css/images/ched_logo.png" width="100px" height="100px"/></span><br>--}}
-{{--        <a href="/"><b class="text-danger">PAPERLESS </b>SYSTEM</a>--}}
+{{--        <a href="/"><b class="text-danger">DOCUMENT SUBMISSION </b>SYSTEM</a>--}}
 {{--    </div>--}}
     <!-- /.login-logo -->
     <div class="login-box-body">
         <div class="login-logo">
     <span class="logo-lg">
             <img src="{{$templatePlugin->rootLocation()}}/css/images/ched_logo.png" width="100px" height="100px"/></span><br>
-            <a href="/"><b class="text-danger">PAPERLESS </b>SYSTEM</a>
+            <a href="/"><b class="text-danger">DOCUMENT SUBMISSION </b>SYSTEM</a>
         </div>
         <h6 class="text-center" style="font-size:24px"><span class="text-danger"><b>Commission on Higher Education </b></span><br>Central Luzon RO-III</h6>
         <div class="social">
