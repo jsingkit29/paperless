@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('user_id');
             $table->integer('user_group_id');
             $table->string('username')->nullable()->unique();
+            $table->string('email')->nullable()->unique();
             $table->string('password');
             $table->boolean('activated')->default(false);
             $table->integer('created_by')->nullable();
