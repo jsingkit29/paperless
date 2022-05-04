@@ -13,6 +13,18 @@ use Illuminate\Validation\ValidationException;
 
 class AdminController extends Controller
 {
+
+    public function index()
+    {
+        if(auth()->check() && auth()->user()->user_group_id == 1){
+            $users = User::all();
+            return view('dashboard/index', [
+                "users" => $users,
+            ]);
+           
+            }
+    }
+
     public function create()
     {
         return view('user/edit',[
@@ -29,17 +41,21 @@ class AdminController extends Controller
         // ]);
         $validation = $request->validate([
             "user_group_id" => "required",
+            "heiname" => "required",
             "username" => "required",
             "password" => "required",
+            "gdrivelink" => "required",
             "confirm_password" => "required"
 
         ]);
 
         $user = new User();
-        $user->user_group_id = $request->user_group_id;
+        $user->user_group_id = '2';
+        $user->heiname = $request->heiname;
         $user->username = $request->username;
         $request->merge(['password' => bcrypt($request->input('password'))]);
         $user->password = $request->password;
+        $user->gdrivelink = $request->gdrivelink;
         $user->activated = '1';
         $user->save();
 

@@ -27,7 +27,11 @@ Route::get('/login',  function () {
     return view('auth/login');
 })->name('login');
 
-
+//User routes
+//Route::get('/users/create', 'AdminController@create');
+Route::get('/users/create', [\App\Http\Controllers\AdminController::class, 'create']);
+Route::get('/logout', 'AdminController@logout')->name('logout');
+Route::post('/users/store', 'AdminController@store')->name("saved_users");
 
 // Admin routes
 // Route::get('/admin', function () {

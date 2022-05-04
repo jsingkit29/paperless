@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Appointment;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
@@ -19,11 +19,11 @@ class DashboardController extends Controller
     public function index()
     {
         if(auth()->check() && auth()->user()->user_group_id == 1){
-        // $appointments = Appointment::all();
-        // return view('dashboard/index', [
-        //     "appointments" => $appointments,
-        // ]);
-        return view('dashboard/index');
+        $users = User::all();
+        return view('dashboard/index', [
+            "users" => $users,
+        ]);
+       
         }
 
     }

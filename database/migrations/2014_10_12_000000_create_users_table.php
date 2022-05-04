@@ -16,9 +16,10 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('user_id');
             $table->integer('user_group_id');
+            $table->string('heiname')->nullable()->unique();
             $table->string('username')->nullable()->unique();
-            $table->string('email')->nullable()->unique();
             $table->string('password');
+            $table->string('gdrivelink')->nullable();
             $table->boolean('activated')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();

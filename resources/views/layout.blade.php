@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>CHEDRO-III Appointment System</title>
+    <title>CHED CLRO3 Submission Portal</title>
     <link rel="shortcut icon" type="image/png" href="{{asset('/css/images/ched_logo.png')}}"/>
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
