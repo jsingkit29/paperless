@@ -41,7 +41,7 @@
                             </div>
                         </div>
 
-                        <form method="POST" action="{{route("saved_users")}}" enctype="multipart/form-data">
+                        <form method="POST" action="{{route('saved_users')}}" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <input type="hidden" id = "user_id" name = "user_id" value="{{@ $user != null ? $user->user_id : ''}}">
                             <div class="row">
