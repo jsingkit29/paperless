@@ -98,6 +98,7 @@
     <!-- Main content -->
     <section class="content">
         <!-- Small boxes (Stat box) -->
+        @if(auth()->check() && auth()->user()->user_group_id == 1) 
         <div class="login-logo">
         <a href="/dashboard"><b class="text-danger">CHED CENTRAL LUZON RO3 </b><b>SUBMISSION PORTAL ADMIN</b></a>
         </div>
@@ -129,24 +130,23 @@
 
                             <div class="content">
                                 <div class="panel-body">
-                                    <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="data-table-users">
+                                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="data-table-users">
                                         <thead>
                                         <tr>
-                                            <th class="text-center" width="80%"> Name </th>
-                                            <th class="text-center" width="80%"> Email </th>
-                                            <th class="text-center" width="80%"> User Type </th>
-
-                                            <th class="text-center">Edit/Delete/Reset Password</th>
+                                            <th class="text-center" width="25%"> HEI Name </th>
+                                            <th class="text-center" width="20%"> User Name </th>
+                                            <th class="text-center" width="80%"> Google Drive Link </th>
+                                            <!-- <th class="text-center">Edit/Delete/Reset Password</th> -->
                                         </tr>
                                         </thead>
 
                                         <tbody>
                                         @foreach($users as $user)
                                             <tr>
-                                                <td class="text-center">{{$user->first_name.' '.$user->last_name}}</td>
-                                                <td class="text-center">{{$user->email}}</td>
-
-                                                <td class="text-center">
+                                                <td class="text-center">{{$user->heiname}}</td>
+                                                <td class="text-center">{{$user->username}}</td>
+                                                <td class="text-center">{{$user->gdrivelink}}</td>
+                                                <!-- <td class="text-center">
                                                     {{isset($user->userGroup) ? $user->userGroup->user_group_name : ''}}
 
                                                 </td>
@@ -157,7 +157,7 @@
                                                         <a href="#" data-id = "{{$user->user_id}}" class="btn btn-danger btn-sm user-delete" class="addMore" title="Delete"><i class="glyphicon glyphicon-trash"></i></a>
                                                         <a href="users/resetpassword/{{$user->user_id}}" class="btn btn-warning btn-sm" class="addMore" title="Reset Password"><i class="glyphicon glyphicon-lock"></i></a>
                                                     </div>
-                                                </td>
+                                                </td> -->
                                             </tr>
                                         @endforeach
                                         </tbody>
@@ -169,6 +169,40 @@
                 </div>
             </div>
         </div>
+        @endif
+
+        @if(auth()->check() && auth()->user()->user_group_id == 2) 
+        <div class="login-logo">
+        <a href="/dashboard"><b class="text-danger">CHED CENTRAL LUZON RO3 </b><b>SUBMISSION PORTAL</b></a>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid">
+                    <div class="panel panel-flat">
+                        <div class="panel-body">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <section class="content-header">
+                                            <h1>
+                                                <i class="fa fa-user"></i> View Users
+                                            </h1>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="panel-body">
+                                <a href="{{$currentuser}}" class="btn btn-warning btn-lg" class="addMore" title="Proceed to Google Drive"><i class="glyphicon glyphicon-folder-open"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+
     </section>
 @endsection
 

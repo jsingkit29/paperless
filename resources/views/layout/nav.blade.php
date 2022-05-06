@@ -29,7 +29,7 @@
                                     $templatePlugin->rootLocation()."/css/images/image_placeholder.png"}}" class="user-image" alt="User Image">--}}
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li>
+                        <!-- <li>
                             <a href="https://chedro3.ched.gov.ph" class="btn btn-link">
                                 CHEDRO-III Website
                                 <div class="pull-right">
@@ -45,7 +45,7 @@
                                     <span class="fa fa-user"></span>
                                 </div>
                             </a>
-                        </li>
+                        </li> -->
 
                         {{-- <li>
                             <a href="/updatePassword" class="btn btn-link">Change Password

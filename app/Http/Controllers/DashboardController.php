@@ -18,13 +18,14 @@ class DashboardController extends Controller
     // }
     public function index()
     {
-        if(auth()->check() && auth()->user()->user_group_id == 1){
+        
         $users = User::all();
+        $currentuser = auth()->user()->gdrivelink;
         return view('dashboard/index', [
             "users" => $users,
+            "currentuser" => $currentuser,
         ]);
        
-        }
-
+        
     }
 }

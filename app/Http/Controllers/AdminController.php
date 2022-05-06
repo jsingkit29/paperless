@@ -64,7 +64,7 @@ class AdminController extends Controller
         // }catch(Throwable $e){
         //     dd($e);
         // }
-        return response()->json($user);
+        // return response()->json($user);
 
          // return redirect('/');
          return redirect()->back()->with('message', 'User Successfully Added');
