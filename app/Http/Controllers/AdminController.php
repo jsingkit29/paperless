@@ -34,13 +34,13 @@ class AdminController extends Controller
 
     public function store(Request $request)
     {
-
         // $validation = $request->validate([
         //     "document_type" => "required",
         //     "description" => "required"
         // ]);
+       // return response()->json($request->all());
         $validation = $request->validate([
-            "user_group_id" => "required",
+            //"user_group_id" => "required",
             "heiname" => "required",
             "username" => "required",
             "password" => "required",
@@ -49,15 +49,22 @@ class AdminController extends Controller
 
         ]);
 
-        $user = new User();
-        $user->user_group_id = '2';
-        $user->heiname = $request->heiname;
-        $user->username = $request->username;
-        $request->merge(['password' => bcrypt($request->input('password'))]);
-        $user->password = $request->password;
-        $user->gdrivelink = $request->gdrivelink;
-        $user->activated = '1';
-        $user->save();
+        
+            $user = new User();
+            $user->user_group_id = '2';
+            $user->heiname = $request->heiname;
+            $user->username = $request->username;
+            $request->merge(['password' => bcrypt($request->input('password'))]);
+            $user->password = $request->password;
+            $user->gdrivelink = $request->gdrivelink;
+            $user->activated = '1';
+            $user->save();
+        // try{
+        // dd($user);
+        // }catch(Throwable $e){
+        //     dd($e);
+        // }
+        return response()->json($user);
 
          // return redirect('/');
          return redirect()->back()->with('message', 'User Successfully Added');
