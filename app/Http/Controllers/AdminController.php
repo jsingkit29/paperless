@@ -42,18 +42,18 @@ class AdminController extends Controller
         // ]);
        // return response()->json($request->all());
         $validation = $request->validate([
-            //"user_group_id" => "required",
+            "user_group_id" => "required",
             "heiname" => "required",
             "username" => "required",
             "password" => "required",
-            "gdrivelink" => "required",
+            // "gdrivelink" => "required",
             "confirm_password" => "required"
 
         ]);
 
         
             $user = new User();
-            $user->user_group_id = '2';
+            $user->user_group_id = $request->user_group_id;
             $user->heiname = $request->heiname;
             $user->username = $request->username;
             $request->merge(['password' => bcrypt($request->input('password'))]);

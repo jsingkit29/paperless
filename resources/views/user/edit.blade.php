@@ -50,10 +50,32 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-8">
-                                                <label for="first_name">Higher Education Institution Name</label>
+                                                <label for="first_name">Higher Education Institution Name / Organization Name</label>
                                                 <div class="col-sm-12">
-                                                    <input type="text" class="form-control" id="heiname" name="heiname" placeholder="HEI Name" />
+                                                    <input type="text" class="form-control" id="heiname" name="heiname" placeholder="HEI Name / Organization Name" />
                                                 </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                            <label for="service">User Group</label>
+                                                <div class="col-sm-12">
+                                                    <select class="form-control select1" id="user_group_id" name="user_group_id" placeholder= "User Group" onChange="check(this);">
+                                                        <option value="" disabled selected>
+                                                        Select User Group
+                                                        </option>
+                                            
+                                                        <option value="1">
+                                                        Admin
+                                                        </option>
+                                                        
+                                                        <option value="2">
+                                                        Higher Education Institution
+                                                        </option>
+                                                        
+                                                        <option value="3">
+                                                        CHEDRO 3 Personnel
+                                                        </option>
+                                                        
+                                                    </select>
                                             </div>
                                         </div>
                                     </div>
