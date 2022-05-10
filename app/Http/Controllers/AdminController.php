@@ -17,7 +17,9 @@ class AdminController extends Controller
     public function index()
     {
         if(auth()->check() && auth()->user()->user_group_id == 1){
-            $users = User::all();
+            // $users = User::select("SELECT * FROM users WHERE user_group_id = '2'");
+            // $users = User::where('user_group_id',2)->get();
+            $users=User::where('user_group_id',2)->get();
             return view('dashboard/index', [
                 "users" => $users,
             ]);

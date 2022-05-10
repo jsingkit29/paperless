@@ -1,18 +1,18 @@
 $(document).ready(function() {
 
- /*   $('#data-table-users').dataTable(
-        {
-            "columnDefs": [
-                { "width": "20%", "targets": 0 },
-                { "width": "15%", "targets": 1 },
-                { "width": "10%", "targets": 2 },
-                { "width": "15%", "targets": 3 },
-                { "width": "15%", "targets": 4 },
-                { "width": "15%", "targets": 5 },
-                { "width": "10%", "targets": 6 },
-            ]
-        }
-    );*/
+    // $('#data-table-users').dataTable(
+    //     {
+    //         "columnDefs": [
+    //             { "width": "20%", "targets": 0 },
+    //             { "width": "15%", "targets": 1 },
+    //             { "width": "10%", "targets": 2 },
+    //             { "width": "15%", "targets": 3 },
+    //             { "width": "15%", "targets": 4 },
+    //             { "width": "15%", "targets": 5 },
+    //             { "width": "10%", "targets": 6 },
+    //         ]
+    //     }
+    // );
 
     $.extend( $.fn.dataTable.defaults, {
         autoWidth: false,

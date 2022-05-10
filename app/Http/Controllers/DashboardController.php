@@ -19,7 +19,7 @@ class DashboardController extends Controller
     public function index()
     {
         
-        $users = User::all();
+        $users=User::where('user_group_id',2)->get();
         $currentuser = auth()->user()->gdrivelink;
         return view('dashboard/index', [
             "users" => $users,

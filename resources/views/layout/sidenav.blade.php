@@ -22,7 +22,7 @@
                 </a>
                 <ul class="treeview-menu">
                     
-                    <li class="{{$_SERVER['REQUEST_URI'] == "/users/create" ? "active" : ""}}">
+                    <li class="{{$_SERVER['REQUEST_URI'] == '/users/create' ? "active" : ""}}">
                         <a href="/users/create"><i class="glyphicon glyphicon-plus-sign"></i> Create</a>
                     </li>
                 </ul>

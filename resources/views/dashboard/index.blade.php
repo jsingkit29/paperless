@@ -20,6 +20,7 @@
     <script src="{{asset('/js/modules/users/main/users.js')}}"></script>
     <script src="{{asset('/js/modules/users/main/event_users.js')}}"></script>
     <script src="{{asset('/js/modules/users/data_table/users_data_table.js')}}"></script>
+    <!-- <script src="{{asset('/js/modules/users/data_table/users_data_table.js')}}"></script> -->
 
     <script>
         var bodyTag = $("body");
@@ -130,13 +131,13 @@
 
                             <div class="content">
                                 <div class="panel-body">
-                                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="data-table-users">
-                                        <thead>
+                                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="data-table-documents">
+                                        <thead class="thread-dark">
                                         <tr>
                                             <th class="text-center" width="25%"> HEI Name </th>
                                             <th class="text-center" width="20%"> User Name </th>
                                             <th class="text-center" width="80%"> Google Drive Link </th>
-                                            <!-- <th class="text-center">Edit/Delete/Reset Password</th> -->
+                                            <th class="text-center">Action</th>
                                         </tr>
                                         </thead>
 
@@ -146,6 +147,12 @@
                                                 <td class="text-center">{{$user->heiname}}</td>
                                                 <td class="text-center">{{$user->username}}</td>
                                                 <td class="text-center">{{$user->gdrivelink}}</td>
+                                                <td class="text-center">
+                                                <div class="btn-group">
+                                                    <a href="{{$user->gdrivelink}}" class="btn btn-warning btn-sm" class="addMore" title="Proceed to Google Drive"><i class="glyphicon glyphicon-folder-open"></i></a>
+                                                    </div>
+                                                </td>
+                                                
                                                 <!-- <td class="text-center">
                                                     {{isset($user->userGroup) ? $user->userGroup->user_group_name : ''}}
 
@@ -185,7 +192,7 @@
                                     <div class="col-md-10">
                                         <section class="content-header">
                                             <h1>
-                                                <i class="fa fa-user"></i> View Users
+                                                <i class="fa fa-user"></i> View/Upload via Google Drive
                                             </h1>
                                         </section>
                                     </div>
