@@ -6,10 +6,6 @@ $(document).ready(function() {
     //             { "width": "20%", "targets": 0 },
     //             { "width": "15%", "targets": 1 },
     //             { "width": "10%", "targets": 2 },
-    //             { "width": "15%", "targets": 3 },
-    //             { "width": "15%", "targets": 4 },
-    //             { "width": "15%", "targets": 5 },
-    //             { "width": "10%", "targets": 6 },
     //         ]
     //     }
     // );
@@ -21,7 +17,6 @@ $(document).ready(function() {
             {orderable: true, width: '25%', targets: [1]},
             {orderable: true, width: '20%', targets: [2]},
             {orderable: true, width: '20%', targets: [3]},
-            {orderable: true, width: '25%', targets: [4]},
         ],
         dom: '<"datatable-header"fl><"datatable-scroll"t><"datatable-footer"ip>',
         language: {
