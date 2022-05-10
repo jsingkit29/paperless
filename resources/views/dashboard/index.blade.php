@@ -113,7 +113,7 @@
                                     <div class="col-md-10">
                                         <section class="content-header">
                                             <h1>
-                                                <i class="fa fa-user"></i> View Users
+                                                <i class="fa fa-user"></i> View HEIs
                                             </h1>
                                         </section>
                                     </div>
@@ -224,7 +224,7 @@
                                     <div class="col-md-10">
                                         <section class="content-header">
                                             <h1>
-                                                <i class="fa fa-user"></i> View Users
+                                                <i class="fa fa-user"></i> View HEIs
                                             </h1>
                                         </section>
                                     </div>
