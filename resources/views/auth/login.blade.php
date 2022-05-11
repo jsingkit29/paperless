@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CHEDRO-III Document Submission System</title>
+    <title>CHED CLRO3 Submission Portal</title>
     <link rel="shortcut icon" type="image/png" href="{{asset('/css/images/ched_logo.png')}}"/>
 
     <!-- Bootstrap 3.3.7 -->
@@ -33,22 +33,22 @@
 {{--    <div class="login-logo">--}}
 {{--    <span class="logo-lg">--}}
 {{--            <img src="{{$templatePlugin->rootLocation()}}/css/images/ched_logo.png" width="100px" height="100px"/></span><br>--}}
-{{--        <a href="/"><b class="text-danger">DOCUMENT SUBMISSION </b>SYSTEM</a>--}}
+{{--        <a href="/"><b class="text-danger">CHED CENTRAL LUZON </b>SUBMISSION PORTAL</a>--}}
 {{--    </div>--}}
     <!-- /.login-logo -->
     <div class="login-box-body">
         <div class="login-logo">
     <span class="logo-lg">
             <img src="{{$templatePlugin->rootLocation()}}/css/images/ched_logo.png" width="100px" height="100px"/></span><br>
-            <a href="/"><b class="text-danger">DOCUMENT SUBMISSION </b>SYSTEM</a>
+            <a href="/"><b class="text-danger">CHED CENTRAL LUZON </b><b>SUBMISSION PORTAL</a></b>
         </div>
-        <h6 class="text-center" style="font-size:24px"><span class="text-danger"><b>Commission on Higher Education </b></span><br>Central Luzon RO-III</h6>
+        <h6 class="text-center" style="font-size:24px"><span class="text-danger"><b>CCL</b></span><b>SP</h6></b>
         <div class="social">
            {{-- <img src="{{asset('/css/images/open_hearts_logo.jpg"
                  alt="open" width="100%">--}}
-                <h4>
+                <!-- <h4>
             <p class="login-box-msg"> Submission Portal</p>
-                </h4>
+                </h4> -->
             <form id="form_login" class="form-horizontal" action="#" method="post">
                 {{csrf_field()}}
                 <div class="form-group has-feedback">
