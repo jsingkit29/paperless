@@ -212,7 +212,7 @@
 
         @if(auth()->check() && auth()->user()->user_group_id == 3) 
         <div class="login-logo">
-        <a href="/dashboard"><b class="text-danger">CHED CENTRAL LUZON RO3 </b><b>SUBMISSION PORTAL PERSONNEL</b></a>
+        <a href="/dashboard"><b class="text-danger">CHED CENTRAL LUZON RO3 </b><b>SUBMISSION PORTAL PAGE</b></a>
         </div>
         <div class="row">
             <div class="col-md-12">
