@@ -25,11 +25,14 @@
                     <li class="{{$_SERVER['REQUEST_URI'] == '/users/create' ? "active" : ""}}">
                         <a href="/users/create"><i class="glyphicon glyphicon-plus-sign"></i> Create</a>
                     </li>
+                    <li class="{{$_SERVER['REQUEST_URI'] == '/users/view' ? "active" : ""}}">
+                        <a href="/users/view"><i class="glyphicon glyphicon-th-list"></i> View All Users</a>
+                    </li>
                 </ul>
             </li>
 
 
-             <!-- <li class="treeview {{strpos($_SERVER['REQUEST_URI'], '/usergroup') !== false ? "active" : ""}}">
+            <!-- <li class="treeview {{strpos($_SERVER['REQUEST_URI'], '/usergroup') !== false ? "active" : ""}}">
                 <a href="#"><i class="fa fa-user"></i>
                     <span>User Group</span>
                     <span class="pull-right-container">

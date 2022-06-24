@@ -27,6 +27,19 @@ class AdminController extends Controller
             }
     }
 
+    public function view()
+    {
+        if(auth()->check() && auth()->user()->user_group_id == 1){
+            // $users = User::select("SELECT * FROM users WHERE user_group_id = '2'");
+            // $users = User::where('user_group_id',2)->get();
+            $users=User::all();
+            return view('dashboard/index', [
+                "users" => $users,
+            ]);
+           
+            }
+    }
+
     public function create()
     {
         return view('user/edit',[

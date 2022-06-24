@@ -30,6 +30,7 @@ Route::get('/login',  function () {
 //User routes
 //Route::get('/users/create', 'AdminController@create');
 Route::get('/users/create', [\App\Http\Controllers\AdminController::class, 'create']);
+Route::get('/users/view', [\App\Http\Controllers\AdminController::class, 'view']);
 Route::get('/logout', [\App\Http\Controllers\AdminController::class, 'logout'])->name('logout');
 Route::post('/users/store', [\App\Http\Controllers\AdminController::class, 'store'])->name("saved_users");
 
