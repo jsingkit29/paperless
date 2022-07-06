@@ -113,7 +113,7 @@
                                     <div class="col-md-10">
                                         <section class="content-header">
                                             <h1>
-                                                <i class="fa fa-user"></i> View HEIs
+                                                <i class="fa fa-user"></i> View Users
                                             </h1>
                                         </section>
                                     </div>
@@ -137,16 +137,20 @@
                                             <th class="text-center" width="25%"> HEI Name </th>
                                             <th class="text-center" width="20%"> User Name </th>
                                             <th class="text-center" width="80%"> Google Drive Link </th>
+                                            <th class="text-center">User Group</th>
                                             <th class="text-center">Action</th>
                                         </tr>
                                         </thead>
 
                                         <tbody>
                                         @foreach($users as $user)
+
+
                                             <tr>
                                                 <td class="text-center">{{$user->heiname}}</td>
                                                 <td class="text-center">{{$user->username}}</td>
                                                 <td class="text-center">{{$user->gdrivelink}}</td>
+                                                <td class="text-center">{{$user->user_group_id}}</td>
                                                 <td class="text-center">
                                                 <div class="btn-group">
                                                     <a href="{{$user->gdrivelink}}" class="btn btn-warning btn-sm" class="addMore" title="Proceed to Google Drive"><i class="glyphicon glyphicon-folder-open"></i></a>
@@ -170,6 +174,16 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-4 col-md-offset-8 text-right">
+                                               
+                                                <a href="/dashboard" class="btn btn-warning">Back <span class="glyphicon glyphicon-arrow-left"></span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </div>

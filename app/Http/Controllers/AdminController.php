@@ -33,7 +33,7 @@ class AdminController extends Controller
             // $users = User::select("SELECT * FROM users WHERE user_group_id = '2'");
             // $users = User::where('user_group_id',2)->get();
             $users=User::all();
-            return view('dashboard/index', [
+            return view('dashboard/view', [
                 "users" => $users,
             ]);
            
